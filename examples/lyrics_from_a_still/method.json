@@ -1,0 +1,11 @@
+{
+ "what": "a lyric video built from one still photograph and one song",
+ "shape": [
+  {"step": "freeze", "why": "the source was a Live Photo drifting about 0.8 levels across 150 frames. Looping shows a jump; holding one frame shows nothing."},
+  {"step": "choose the cuts on silence", "how": "RMS envelope at 20 ms over the section, then cut in a trough. The pause the singer takes is not always where the punctuation is."},
+  {"step": "time the lines by transcription", "how": "faster-whisper returns a start per sung phrase; the client's own lines map onto those in order. Its word-timestamp stage crashes on short musical excerpts, after the segment times are already printed - which is all that is needed."},
+  {"step": "set the type", "how": "scripts/render_lyrics.py, one transparent PNG per cue, overlaid by scripts/burn_lyrics.py. Needed wherever ffmpeg has no libass."},
+  {"step": "crossfade the join", "how": "acrossfade of about half a second where two parts of a song are spliced."}
+ ],
+ "note": "No lyrics, audio, images or names are kept here. Only the shape of the job."
+}

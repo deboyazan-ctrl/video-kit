@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+.venv/
+models/
+
+# Jobs live outside this repository. Nothing belonging to a client - no
+# footage, no photographs, no names, no dates, no plates - is kept here. What
+# is kept is the method.
+jobs/
+raw/
+work/
+out/

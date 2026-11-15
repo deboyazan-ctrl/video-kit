@@ -1,0 +1,17 @@
+# The venv this was built and run in. Python 3.9.
+#
+# numpy and pillow carry every measurement and every plate in the kit.
+# faster-whisper (with ctranslate2 under it) is only for timing: it reads a
+# shot and says when each phrase starts. Models are NOT pip-installed - fetch
+# them with scripts/get_model.sh, and always pass an explicit --model path,
+# because a bare name like "medium" triggers a Hub download that hangs.
+# arabic-reshaper and python-bidi are needed wherever Arabic has to be DRAWN
+# rather than burned by libass: without them the letters come out disconnected
+# and in the wrong order.
+
+numpy==2.0.2
+pillow==11.3.0
+faster-whisper==1.2.1
+ctranslate2==4.8.1
+arabic-reshaper==3.0.0
+python-bidi==0.6.11
